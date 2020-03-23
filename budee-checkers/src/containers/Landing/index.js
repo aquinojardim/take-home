@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+// components
+import Input from "../../components/Input";
+import CheckerBoard from "../CheckerBoard/CheckerBoard";
 
 class Landing extends Component {
   constructor(props) {
@@ -7,7 +10,12 @@ class Landing extends Component {
   }
 
   render() {
-    return <div>test</div>;
+    return (
+      <div>
+        <Input />
+        <CheckerBoard />
+      </div>
+    );
   }
 }
 
