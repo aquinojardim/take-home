@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+// styling
+import "./CheckerBoard.css";
 
 class CheckerBoard extends Component {
   constructor(props) {
@@ -11,17 +13,20 @@ class CheckerBoard extends Component {
     return (
       <div
         style={{
-          width: "100vw",
-          height: "50vh",
+          width: "500",
+          height: "500",
           display: "grid",
           gridGap: "0px",
           gridTemplateColumns: `repeat(5,${cellDiameter}px)`,
           gridTemplateRows: `repeat(5,${cellDiameter}px)`,
-          gridAutoFlow: "row",
+          gridAutoFlow: "row"
         }}
       >
         {[...Array(25)].map((x, i) => (
-          <div key={i}>cell</div>
+          <div
+            key={i}
+            className={i % 2 !== 0 ? "black-cell" : "white-cell"}
+          ></div>
         ))}
       </div>
     );
