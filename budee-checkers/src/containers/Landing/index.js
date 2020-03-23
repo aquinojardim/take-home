@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 // components
-import Input from "../../components/Input";
+import UserInput from "../../components/UserInput";
 import CheckerBoard from "../CheckerBoard/CheckerBoard";
 
 class Landing extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+    };
   }
 
   render() {
     return (
       <div>
-        <Input />
+        <UserInput />
         <CheckerBoard chosenCells={5}/>
       </div>
     );
