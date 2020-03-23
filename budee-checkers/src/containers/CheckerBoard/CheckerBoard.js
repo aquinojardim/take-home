@@ -29,6 +29,7 @@ class CheckerBoard extends Component {
           gridTemplateRows: `repeat(${chosenCells},${cellDiameter}px)`,
           gridAutoFlow: "row",
           margin: "auto",
+          marginTop: `${cellDiameter}px`,
         }}
       >
         {[...Array(amountOfCells)].map((x, i) => (
