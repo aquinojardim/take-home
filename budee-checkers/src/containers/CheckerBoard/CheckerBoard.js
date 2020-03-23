@@ -8,8 +8,18 @@ class CheckerBoard extends Component {
 
   render() {
     return (
-      <div>
-          CheckerBoard
+      <div
+        style={{
+          width: "100vw",
+          height: "50vh",
+          display: "grid",
+          gridGap: "0px",
+          gridTemplateColumns: `repeat(5,${20}px)`,
+          gridTemplateRows: `repeat(5,${20}px)`,
+          gridAutoFlow: "row"
+        }}
+      >
+          test
       </div>
     );
   }
