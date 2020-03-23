@@ -7,6 +7,7 @@ class CheckerBoard extends Component {
   }
 
   render() {
+    const cellDiameter = 500 / 5;
     return (
       <div
         style={{
@@ -14,12 +15,14 @@ class CheckerBoard extends Component {
           height: "50vh",
           display: "grid",
           gridGap: "0px",
-          gridTemplateColumns: `repeat(5,${20}px)`,
-          gridTemplateRows: `repeat(5,${20}px)`,
-          gridAutoFlow: "row"
+          gridTemplateColumns: `repeat(5,${cellDiameter}px)`,
+          gridTemplateRows: `repeat(5,${cellDiameter}px)`,
+          gridAutoFlow: "row",
         }}
       >
-          test
+        {[...Array(25)].map((x, i) => (
+          <div key={i}>cell</div>
+        ))}
       </div>
     );
   }
