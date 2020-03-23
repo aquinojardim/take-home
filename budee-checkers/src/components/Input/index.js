@@ -12,6 +12,10 @@ class Input extends Component {
     this.setState({ chosenValue });
   };
 
+  onSubmit = () => {
+    const { chosenValue } = this.state;
+    console.log(chosenValue);
+  };
 
   render() {
     const { chosenValue } = this.state;
@@ -25,6 +29,7 @@ class Input extends Component {
           min={5}
           value={chosenValue}
         />
+        <button onClick={this.onSubmit}>Change Checkerboard Size</button>
       </div>
     );
   }
