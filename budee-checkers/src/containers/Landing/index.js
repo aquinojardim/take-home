@@ -13,7 +13,7 @@ class Landing extends Component {
     return (
       <div>
         <Input />
-        <CheckerBoard />
+        <CheckerBoard chosenCells={5}/>
       </div>
     );
   }
