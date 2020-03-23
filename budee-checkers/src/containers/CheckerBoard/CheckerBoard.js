@@ -11,20 +11,27 @@ class CheckerBoard extends Component {
   }
 
   render() {
+    const { chosenCells } = this.props;
+
+    // to get how many cells total are in board.
+    const amountOfCells = chosenCells * chosenCells;
+    // allows for the cells to be dynamic, split the total width evenly.
     const cellDiameter = 500 / 5;
+
     return (
       <div
         style={{
-          width: "500",
-          height: "500",
+          width: "500px",
+          height: "500px",
           display: "grid",
           gridGap: "0px",
-          gridTemplateColumns: `repeat(5,${cellDiameter}px)`,
-          gridTemplateRows: `repeat(5,${cellDiameter}px)`,
-          gridAutoFlow: "row"
+          gridTemplateColumns: `repeat(${chosenCells},${cellDiameter}px)`,
+          gridTemplateRows: `repeat(${chosenCells},${cellDiameter}px)`,
+          gridAutoFlow: "row",
+          margin: "auto",
         }}
       >
-        {[...Array(25)].map((x, i) => (
+        {[...Array(amountOfCells)].map((x, i) => (
           <div
             key={i}
             className={i % 2 !== 0 ? "black-cell" : "white-cell"}
