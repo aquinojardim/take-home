@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 // styling
 import "./CheckerBoard.css";
+// prop-types
+import PropTypes from "prop-types";
 
 class CheckerBoard extends Component {
   constructor(props) {
@@ -32,5 +34,9 @@ class CheckerBoard extends Component {
     );
   }
 }
+
+CheckerBoard.propTypes = {
+  chosenCells: PropTypes.number.isRequired
+};
 
 export default CheckerBoard;
