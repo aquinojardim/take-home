@@ -7,7 +7,7 @@ class Input extends Component {
   }
 
   render() {
-    return <div>test</div>;
+    return <input type="number" />;
   }
 }
 
