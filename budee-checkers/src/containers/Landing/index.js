@@ -7,14 +7,21 @@ class Landing extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      chosenCells: 5
     };
   }
 
+  handleChangeInValue = chosenCells => {
+    this.setState({chosenCells})
+  };
+
   render() {
+    const { chosenCells } = this.state;
+
     return (
       <div>
-        <UserInput />
-        <CheckerBoard chosenCells={5}/>
+        <UserInput updateChosenValue={this.handleChangeInValue} />
+        <CheckerBoard chosenCells={chosenCells} />
       </div>
     );
   }
