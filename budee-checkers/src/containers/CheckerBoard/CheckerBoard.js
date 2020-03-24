@@ -21,21 +21,20 @@ class CheckerBoard extends Component {
     return (
       <div
         style={{
-          width: "500px",
-          height: "500px",
+          width: "100vw",
+          height: "100vh",
           display: "grid",
           gridGap: "0px",
           gridTemplateColumns: `repeat(${chosenCells},${cellDiameter}px)`,
           gridTemplateRows: `repeat(${chosenCells},${cellDiameter}px)`,
           gridAutoFlow: "row",
           margin: "auto",
-          marginTop: `${cellDiameter}px`,
         }}
       >
         {[...Array(amountOfCells)].map((x, i) => (
           <div
             key={i}
-            className={i % 2 !== 0 ? "black-cell" : "white-cell"}
+            className={i % 2 === 0 ? "white-cell" : "black-cell"}
           ></div>
         ))}
       </div>
