@@ -14,7 +14,8 @@ class UserInput extends Component {
 
   onSubmit = () => {
     const { chosenValue } = this.state;
-    console.log(chosenValue);
+    const chosenNumber = parseFloat(chosenValue);
+    this.props.updateChosenValue(chosenNumber);
   };
 
   render() {
